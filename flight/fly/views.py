@@ -7,8 +7,7 @@ def index(request):
     resp = ""
     f = Fly.objects.all()
     for d in f:
-        resp += "\n"
         resp += f" {d} "
-        resp += f"{d.id}"
+        resp += f"{d.id}\n"  # Adding a new line after d.id
 
     return HttpResponse(resp)
