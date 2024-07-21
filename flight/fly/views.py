@@ -6,4 +6,5 @@ from django.http import HttpResponse
 def index(request):
     for i in range(0,7):
         name = "nida"
-        return HttpResponse("Hello ", i, name)
+        n +=  HttpResponse(f"Hello {i}" )
+    return n
