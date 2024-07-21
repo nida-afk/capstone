@@ -4,9 +4,11 @@ from django.http import HttpResponse
 
 # Create your views here.
 def index(request):
-    response_text = ""
+    resp = ""
     f = Fly.objects.all()
     for d in f:
-        response_text += f"{d}"
-        response_text += "\n"
-    return HttpResponse(response_text)
+        resp += "\n"
+        resp += f" {d} "
+        resp += f"{d.id}"
+
+    return HttpResponse(resp)
