@@ -8,5 +8,5 @@ def index(request):
     f = Fly.objects.all()
     for d in f:
 
-        response_text += f" '\n'{"\n"} + {d}"
+        response_text += f"{d}"
     return HttpResponse(response_text)
