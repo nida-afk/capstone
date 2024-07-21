@@ -1,3 +1,6 @@
 from django.shortcuts import render
-from 
+from .models import Fly, Jun
+
 # Create your views here.
+def index():
+    
