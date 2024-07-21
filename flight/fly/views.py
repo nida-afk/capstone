@@ -4,7 +4,7 @@ from django.http import HttpResponse
 
 # Create your views here.
 def index(request):
-    for i in range(0,7):
-        name = "nida"
-        n +=  HttpResponse(f"Hello {i}" )
-    return n
+    response_text = ""
+    for i in range(0, 7):
+        response_text += f"Hello {i} "
+    return HttpResponse(response_text)
