@@ -4,7 +4,10 @@ from django.http import HttpResponse
 
 # Create your views here.
 def index(request):
+    resp = ""
     f = Fly.objects.all()
-    resp = "\n".join([f" {d} {d.id}" for d in f])  # Joining each entry with a new line
+    for d in f:
+        resp += f" {d} "
+        resp += f"{d.id}\n"  # Adding a new line after d.id
 
     return HttpResponse(resp)
