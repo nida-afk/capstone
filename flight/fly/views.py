@@ -9,4 +9,5 @@ def index(request):
     for d in f:
 
         response_text += f"{d}"
+        
     return HttpResponse(response_text)
