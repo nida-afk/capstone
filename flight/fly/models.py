@@ -18,4 +18,4 @@ class Name(models.Model):
     i = models.CharField(max_length= 100)
     name = models.ManyToManyField(Fly,  related_name= "name")
     def __str__(self):
-        return f"{self.i} is {self.name}"
+        return f"{self.i}"
