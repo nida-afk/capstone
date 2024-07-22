@@ -17,4 +17,4 @@ class Fly(models.Model):
     forest = models.ForeignKey(Jun, on_delete= models.CASCADE,  related_name= "forest")
     name = models.ManyToManyField(Name,  related_name= "bird")
     def __str__(self):
-        return f"{self.bird} lives in {self.forest} his name is { self.name.all() }"
+        return f"{self.bird} lives in {self.forest} his name is { self.name.all()}"
