@@ -1,7 +1,7 @@
 <html>  <body>
     <ol>
        <li> {{f.bird}}   lives in    {{f.forest}}
-    {% for n in f %}
+    {% for n in f.name.all() %}
     <li>{{n.i}}</li>
      {% endfor %}
        </li>

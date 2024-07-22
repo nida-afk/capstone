@@ -7,7 +7,7 @@ def index(request):
     f = Fly.objects.all()
 
     return render(request, "index.html", {
-        "f" : f
+        "fi" : f
 
     })
 
