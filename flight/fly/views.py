@@ -6,8 +6,10 @@ from django.http import HttpResponse
 def index(request):
     f = Fly.objects.all()
 
-    resp = f # Joining each entry with an HTML line break
-    return HttpResponse(resp)
+    return render(request, "index.html", {
+        "f" : f
+
+    })
 
 def flight(request, i):
 
