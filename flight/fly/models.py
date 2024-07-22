@@ -13,3 +13,9 @@ class Fly(models.Model):
 
     def __str__(self):
         return f"{self.bird} lives in {self.forest}"
+
+class Name(models.Models):
+    i = models.CharField(max_length= 100)
+    name = models.ManyToManyField(Fly, on_delete= models.CASCADE,  related_name= "name")
+    def __str__(self):
+        return f"{self.i} lives in {self.forest}"
