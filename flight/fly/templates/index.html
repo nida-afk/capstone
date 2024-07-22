@@ -1,10 +1,14 @@
 <html>  <body>
-    <ol>
-       <li> {{f.bird}}   lives in    {{f.forest}}
-    {% for n in f.name.all() %}
-    <li>{{n.i}}</li>
-     {% endfor %}
-       </li>
 
+<ol>
+{% for f in fi %}
+       <li> {{f.bird}}   lives in    {{f.forest}}
+{% for n in f.name.all %}
+    <li>{{n.i}}</li>
+{% endfor %}
+
+       </li>
+       {% endfor %}
+</ol>
 
 </body></html>
