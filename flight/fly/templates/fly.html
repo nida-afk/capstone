@@ -1,3 +1,8 @@
 <html>  <body>
-    <h1>{{}}</h1>
+    <h1>{{f.id}}</h1>
+    <p>{{f.bird}} </p>
+    <p>{{f.forest}} </p>
+    {% for n in fly %}
+    <li>{{n.i}}</li>
+    {% endfor %}
 </body></html>
