@@ -9,3 +9,8 @@ def index(request):
     resp = [f"<li type =none> {d.id}  {d} </li>" for d in f] # Joining each entry with an HTML line break
 
     return HttpResponse(resp)
+def flight(request, ids){
+    f = f = Fly.objects.get(pk=ids)
+    return render
+
+}
