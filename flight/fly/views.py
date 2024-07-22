@@ -11,7 +11,7 @@ def index(request):
 
 def flight(request, i){
     f = Fly.objects.get(pk=i)
-    return render(request, "fli.html", {
+    return render(request, "fly.html", {
             "fly" : f.name.all(),
             "flys" : f
     } )
