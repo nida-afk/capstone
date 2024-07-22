@@ -2,9 +2,10 @@
 
 <ol>
 {% for f in fi %}
+
        <li> {{f.bird}}   lives in    {{f.forest}}
 {% for n in f.name.all %}
-    <li>{{n.i}}</li>
+    <p> Names are : {{n.i}}</p>
 {% endfor %}
 
        </li>
