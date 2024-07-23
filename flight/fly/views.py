@@ -22,5 +22,8 @@ def search(request):
     s = request.POST["query"]
     for i in Jun.objects.all():
         if s == i.name:
-            Jun.objects.get(name = s)
-
+            j = Jun.objects.get(name = s)
+            d = j.forest.all()
+    return render(request, "search.html", {
+        "data" : d
+    })
