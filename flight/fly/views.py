@@ -22,4 +22,3 @@ def flight(request, i):
 def add(request,fname):
     
 
-
