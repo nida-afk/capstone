@@ -1,5 +1,6 @@
 <html>  <body>
  <form method = "post">
+ {% csrf_token %}
  <input type = "text" name = "query">
  <br>
 </form>
@@ -9,10 +10,8 @@
 <li> {{n.bird}} belongs to {{n.forest}}</li>
     {% empty %}
     <p>No birds in this forest</p>
-{% endfor %}
-
        </li>
-       {% endfor %}
+    {% endfor %}
 </ol>
 
 </body></html>

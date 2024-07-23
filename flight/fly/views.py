@@ -28,3 +28,8 @@ def search(request):
         return render(request, "search.html", {
         "data" : d
     })
+    else:
+        d = []
+        return render(request, "search.html", {
+        "data" : d
+    })
