@@ -4,5 +4,7 @@
     <p>{{f.forest}} </p>
     {% for n in fly %}
     <li>{{n.i}}</li>
+    {% empty %}
+<p>No names </p>
     {% endfor %}
 </body></html>

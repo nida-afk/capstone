@@ -6,6 +6,8 @@
        <li> {{f.bird}}   lives in    {{f.forest}}
 {% for n in f.name.all %}
     <p> Names are : {{n.i}}</p>
+    {% empty %}
+    <p>No names given</p>
 {% endfor %}
 
        </li>
