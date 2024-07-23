@@ -18,7 +18,7 @@ def flight(request, i):
             "fly" : f.name.all(),
             "f" : f
     } )
-
-
-
+def search(request):
+    s = request.POST["query"]
+    
 
