@@ -19,7 +19,7 @@ def flight(request, i):
             "f" : f
     } )
 def search(request):
-    if request.method = POST:
+    if request.method == 'POST':
         s = request.POST["query"]
         for i in Jun.objects.all():
             if s == i.name:
