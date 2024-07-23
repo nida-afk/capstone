@@ -7,9 +7,6 @@
 <ol>
 {% for f in fi %}
 
-       <li><a href = "{% url 'fly' f.id %}" > {{f.bird}} </a>  lives in    {{f.forest}}
-{% for n in f.name.all %}
-    <p> Names are : {{n.i}}</p>
     {% empty %}
     <p>No names given</p>
 {% endfor %}
