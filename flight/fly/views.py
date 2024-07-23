@@ -25,7 +25,6 @@ def search(request):
             if s == i.name:
                 j = Jun.objects.get(name = s)
                 d = j.forest.all()
-
     return render(request, "search.html", {
         "data" : d
     })
