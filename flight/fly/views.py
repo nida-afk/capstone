@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Fly, Jun
+from .models import Fly, Jun, Name
 from django.http import HttpResponse
 
 # Create your views here.
