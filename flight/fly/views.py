@@ -21,10 +21,8 @@ def flight(request, i):
 def search(request):
     if request.method == 'POST':
         s = request.POST["query"]
-        for i in Jun.objects.all():
-            if s == i.name:
-                j = Jun.objects.get(name = s)
-                d = j.forest.all()
+        j = Jun.objects.get(name = s)
+        d = j.forest.all()
         return render(request, "search.html", {
         "data" : d
     })
