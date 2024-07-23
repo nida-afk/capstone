@@ -19,6 +19,7 @@ def flight(request, i):
             "f" : f
     } )
 
-def add(request, )
+def add(request,fname):
+    
 
 
