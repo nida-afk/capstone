@@ -1,4 +1,5 @@
 # music_player_app/views.py
+import requests
 
 from django.contrib.auth import authenticate, login, logout
 from django.db import IntegrityError
