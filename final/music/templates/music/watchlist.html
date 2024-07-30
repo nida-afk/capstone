@@ -1,0 +1,17 @@
+{% extends "music/layout.html" %}
+
+{% block body %}
+
+    <h1>PlayLists</h1>
+    <ul>
+        {% for song in songs %}
+            <li>
+
+                <img src="{{ song.artworkUrl100 }}" alt="Album Art">
+                <a href="{% url 'song_details' song.trackId %}">{{ song.trackName }} by {{ song.artistName }} </a>
+
+            </li>
+            <br>
+        {% endfor %}
+    </ul>
+{% endblock %}

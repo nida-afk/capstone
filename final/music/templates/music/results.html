@@ -1,0 +1,17 @@
+{% extends "music/layout.html" %}
+
+{% block body %}
+
+    <center><h1>Search Results</h1></center>
+    <ul>
+        {% for song in songs %}
+        <div style = "border: 2px solid #ddd;">
+        <br><br>
+            <li><img src="{{ song.artworkUrl100 }}" alt="Album Art">
+             <a href="{% url 'song_details' song.trackId %}">{{ song.trackName }} by {{ song.artistName }} </a></li>
+            </div>
+             {% endfor %}
+
+    </ul>
+
+{% endblock %}

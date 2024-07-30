@@ -1,0 +1,34 @@
+{% extends "music/layout.html" %}
+
+{% block body %}
+
+
+    <h1 style = "text-align: center;
+            margin-top: 20px;
+            ">Latest Songs</h1><center><p> in sorted order </p></center>
+    <div class="song-container">
+        {% for song in sorted_songs %}
+        <br><br><br>
+            {% if forloop.first or forloop.counter0|divisibleby:"10" %}
+                <div class="artist-line">Songs by {{ song.artistName }}</div>
+                <div class="song-row">
+            {% endif %}
+            <div class="song-card">
+                <img class="song-image" src="{{ song.artworkUrl100 }}" alt="Album Art">
+                <a href="{% url 'song_details' song.trackId %}">
+                    <p>{{ song.trackName }}</p>
+
+
+                </a>
+            </div>
+            <br>
+            {% if forloop.counter|divisibleby:"10" or forloop.last %}
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+
+    <script src= "static/search.js">
+
+    </script>
+{% endblock %}

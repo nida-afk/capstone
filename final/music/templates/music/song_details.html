@@ -1,0 +1,41 @@
+{% extends "music/layout.html" %}
+
+{% block body %}
+
+<body>
+    <center>
+    <h1>{{ song.trackName }}</h1>
+    <div class="song-details">
+        <div class="left">
+
+            <p>Artist: {{ song.artistName }}</p>
+            <p>Album: {{ song.collectionName }}</p>
+            <p>Released in: {{ date }}</p>
+        </div>
+        <div class="right">
+
+            <a class="button" href="{{ song.previewUrl }}" download>Download</a>
+            <br><p></p>
+            {% if watch %}
+            <form action="{% url 'add' song.trackId %}" method="post">
+                {% csrf_token %}
+                <button type="submit">Remove PlayLists</button>
+            </form>
+            {% else %}
+            <form action="{% url 'add' song.trackId %}" method="post">
+                {% csrf_token %}
+                <button type="submit">Add PlayLists</button>
+            </form>
+            {% endif %}
+        </div></div>
+
+        <div class="album">
+            <img src="{{ image }}" alt="Album Art" class="album-art">
+        </div>
+    <audio style = "width: 50%;" controls>
+        <source src="{{ song.previewUrl }}" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+</center>
+
+{% endblock %}

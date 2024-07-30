@@ -1,0 +1,118 @@
+p, h1, h2, h3, h4, h5, h6, li{
+    background-image: repeating-linear-gradient(to right,  lavender ,#62e9ff, magenta, #a8fdf7, #dc62ff, #83ff4d, orange, #ccff00);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    font-family: sans-serif;
+    color: transparent;
+  }
+a{
+    background-image: repeating-linear-gradient(to right,  lavender ,white,  #d792f8 );
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    font-family: sans-serif;
+    color: transparent;
+}
+a:hover{
+    color: white;
+}
+body{
+    background-color: black;
+
+}
+
+button , .button{
+    background-image: linear-gradient(to right,  lavender , magenta, white, blueviolet);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(230, 230, 250, 0.5); /* Subtle glow effect */
+    border: 2px solid white;
+    animation: pulse 2s infinite;
+
+}
+.song-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+
+}
+
+.left {
+    flex: 1;
+}
+
+.right{
+
+flex:2;
+
+}
+
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.song-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+.song-row {
+    display: flex;
+    width: calc(10 * (50% + 10px)); 
+    overflow-x: hidden;
+    scroll-snap-type: x mandatory;
+    scrollbar-width : none;
+}
+.song-card {
+    width: 50%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 10px;
+    text-align: center;
+    scroll-snap-align: start;
+}
+
+.song-image {
+    width: 200px;
+    height: auto;
+    border-radius: 5px;
+}
+a {
+    text-decoration: none;
+
+}
+.artist-line {
+    width: 100%;
+    text-align: center;
+    white-space: nowrap;
+    overflow-x: auto;
+    padding: 10px;
+    background-color: #f9f9f9;
+    margin-bottom: 10px;
+}
+
+.album {
+    display: inline-block;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.album-art {
+    max-width: 100%;
+    border-radius: 5px;
+}
