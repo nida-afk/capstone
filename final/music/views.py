@@ -50,7 +50,18 @@ def register(request):
                 "message": "Passwords must match."
             })
 
-        # Attempt to create new user
+        # Check username length
+        if len(username) < 4 or len(username) > 8:
+            return render(request, "music/register.html", {
+                "message": "Username must be between 4 and 8 characters long."
+            })
+
+        # Check password length
+        if len(password) < 4 or len(password) > 8:
+            return render(request, "music/register.html", {
+                "message": "Password must be between 4 and 8 characters long."
+            })
+
         try:
             user = User.objects.create_user(username, email, password)
             user.save()
