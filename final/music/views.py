@@ -86,7 +86,7 @@ def index(request):
 def result(request):
     if request.method == 'POST':
         artist_name = request.POST.get('artist_name')
-        response = requests.get(f"https://itunes.apple.com/search?term={artist_name}&media=music&entity=song&limit=10")
+        response = requests.get(f"https://itunes.apple.com/search?term={artist_name}&media=music&entity=song&limit=100")
         data = response.json()
         songs = data.get('results', [])
         return render(request, 'music/results.html', {'songs': songs})
