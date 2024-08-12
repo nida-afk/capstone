@@ -84,9 +84,11 @@ DATABASES = {
         "NAME": BASE_DIR / "db.sqlite3",
     }
 }
-if not DEBUG:
-    DATABASES["default"] = dj_database_url.config("postgresql://all_sw21_user:Ritc6JJhRkRnyEm6ipnyhV7RK1QqxBWC@dpg-cqssinij1k6c73fng7d0-a/all_sw21")
-
+DATABASES = {
+    'default': dj_database_url.config(
+        default='postgresql://all_sw21_user:Ritc6JJhRkRnyEm6ipnyhV7RK1QqxBWC@dpg-cqssinij1k6c73fng7d0-a/all_sw21'
+    )
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
