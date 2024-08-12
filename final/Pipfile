@@ -8,6 +8,8 @@ django = "*"
 whitenoise = "*"
 gunicorn = "*"
 requests = "*"
+psycopg2-binary = "*"
+dj-database-url = "*"
 
 [dev-packages]
 
