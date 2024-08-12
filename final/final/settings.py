@@ -83,9 +83,10 @@ if not DEBUG:
     DATABASES = {'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))}
 else:
     DATABASES = {
-    'default': dj_database_url.config("postgresql://all_sw21_user:Ritc6JJhRkRnyEm6ipnyhV7RK1QqxBWC@dpg-cqssinij1k6c73fng7d0-a/all_sw21")}
-
-
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': 'db.sqlite3',
+        }}
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
 
