@@ -80,7 +80,7 @@ WSGI_APPLICATION = "final.wsgi.application"
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 if not DEBUG:
-    DATABASES = {'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))}
+    DATABASES = {'default': dj_database_url.parse("postgresql://all_sw21_user:Ritc6JJhRkRnyEm6ipnyhV7RK1QqxBWC@dpg-cqssinij1k6c73fng7d0-a/all_sw21")}
 else:
     DATABASES = {
         'default': {
