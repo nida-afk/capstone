@@ -83,7 +83,7 @@ if not DEBUG:
     DATABASES = {'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))}
 else:
     DATABASES = {
-    'default': dj_database_url.config("")}
+    'default': dj_database_url.config("postgresql://all_sw21_user:Ritc6JJhRkRnyEm6ipnyhV7RK1QqxBWC@dpg-cqssinij1k6c73fng7d0-a/all_sw21")}
 
 
 # Password validation
