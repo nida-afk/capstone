@@ -2,6 +2,12 @@
 Becoming more comfortable with Django.
 Gain experience with web development design.
 Completing the final project of CS50W !
+
+# Feel free to visit my project repository here
+# [https://github.com/nida-afk/capstone/](https://github.com/nida-afk/capstone/)
+## [demo video](https://youtu.be/nNIZtJGTH-A?si=A281ROqxWBbJhpm6)
+# Deployed On
+# [https://capstone-e0i1.onrender.com](https://capstone-e0i1.onrender.com)
 ## Overview
 In this project, I have build a web application for audio streaming "Amusify" similar to spotify or itunes . Users will be able to search the songs menu, add songs to their playlists, and download their songs.
 It gives instant access to vast variety of songs. An online library of songs, music tracks and podcasts.
