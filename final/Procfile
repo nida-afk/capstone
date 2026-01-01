@@ -1,1 +1,1 @@
-web: python manage.py migrate --verbosity 3 --noinput && python manage.py showmigrations && gunicorn final.wsgi
+web: python manage.py migrate --noinput && python manage.py createsuperuser --noinput || true && gunicorn final.wsgi
