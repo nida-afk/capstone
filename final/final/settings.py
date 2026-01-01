@@ -83,6 +83,8 @@ import os
 
 DATABASES = {'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))}
 
+DATABASES['default']['OPTIONS'] = {'sslmode': 'require'}
+
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
 
@@ -131,3 +133,7 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+print("DATABASE_URL:", os.environ.get("DATABASE_URL"))
+print("DATABASES:", DATABASES)
+
+
